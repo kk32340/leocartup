@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
+// const favicon = require('serve-favicon');
+
 const port = process.env.PORT || 3000;
+
+// app.use(favicon('./public/favicon.ico'));
 
 // Define a route
 app.get('/api', (req, res) => {  

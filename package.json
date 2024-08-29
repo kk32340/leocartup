@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d dist",    
-    "start": "node src/index.js"   
+    "build": "babel src -d dist",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/kk32340/leocartup#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "leocartup": "file:"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.8",

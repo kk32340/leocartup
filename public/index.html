@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taxi Service</title>
+    <title>Leo Taxi Tirupur</title>
     <style>
        
         body {
@@ -36,11 +37,56 @@
             bottom: 0;
         }
         .contact {
-            margin-top: 2rem;
+            margin-top: 1rem;
             font-size: 2.5rem;
             color: #333;
-        }        
+        }  
+        .moving-text {
+            display: inline-block;
+            animation: move 5s linear infinite;
+            }  
+            @keyframes move {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(100%);
+                }
+                }   
+                .whatsapp-button {
+                display: inline-block;
+                background-color: #25D366;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            .call-button {
+                display: inline-block;
+                background-color: #4CAF50; /* Green background */
+                color: white; /* White text */
+                padding: 10px 20px; /* Some padding */
+                text-decoration: none; /* Remove underline */
+                border-radius: 5px; /* Rounded corners */
+                font-size: 16px; /* Font size */
+            }
+
+            .call-button i {
+                margin-right: 8px; /* Space between icon and text */
+            }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const titles = ["Welcome!", "Leo Taxi Tirupur", "Enjoy Your trip"];
+          let index = 0;
+    
+          setInterval(() => {
+            document.title = titles[index];
+            index = (index + 1) % titles.length;
+          }, 1000); // Change title every second
+        });
+      </script>
 </head>
 <body>
     <header>
@@ -51,17 +97,20 @@
             <a href="#">Services</a>
             <a href="#">Contact</a>
         </nav>
-    </header>
-    <div class="main background-div">
+    </header>    
+    <div class="main">
+        <div class="moving-text">Welcome to Leo Taxi Tirupur</div>
         <h2>Your Reliable Taxi Service</h2>
         <p>We provide safe and reliable taxi services 24/7. Book your ride now!</p>
-        <button onclick="alert('Booking feature coming soon!')">Book Now</button>
-        <div class="contact">            
-            <a href="tel:9965535514" target="_self" rel="">CALL NOW</a>
-        </div>
-        <div class="contact">
-            <a href="https://api.whatsapp.com/send/?phone=9965535514&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="nofollow">WHATSAPP</a>
-        </div>
+        <!-- <button onclick="alert('Booking feature coming soon!')">Book Now</button> -->        
+
+        <a href="tel:+919965535514" class="call-button">
+            <i class="fa fa-phone"></i> Call Us
+          </a>
+
+        <a href="https://wa.me/9965535514" target="_blank" class="contact whatsapp-button">
+            <i class="fa fa-whatsapp"></i> Chat with us
+          </a>      
     </div>
 
     <footer>
