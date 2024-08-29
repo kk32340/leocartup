@@ -41,8 +41,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}      
     
     steps:
       - name: Download artifact from build job
